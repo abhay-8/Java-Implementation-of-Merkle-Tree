@@ -8,7 +8,7 @@ To simply put, Merkel Trees are essentially a tree data structure in which data 
 
 Mathematically, it can be expressed as
 
-# node = hash(sumOf(node.children.hash)
+![](https://miro.medium.com/max/944/1*8QaHU1UGOfJWLNPVoyMy0w.jpeg)
 
 > Computing the value of each node in a Merkel Tree
 
@@ -26,6 +26,7 @@ The layer above contains its hash values.
 The nodes in the layer after the second layer are contains the hash value of the child nodes. Generally we take two nodes from the second layer and combine them to form another node. We can take more than two nodes as well but binary merkel trees is the simplest of them all and increasing the degree of nodes only increase the computation and algorithms complexity.
 
 If we have even number of nodes, we take 2 consecutive nodes and form the parent layer. But if we have odd number of nodes, we take two consecutive nodes until one is left to form the parent layer, and then we repeat the remaining node by copying the hash to the parent layer.
+
 ![Layer 3 has the hash of the values of the 2 consecutive nodes of layer 2 and in case we have odd nodes in a layer the last node is repeated](https://miro.medium.com/max/1400/1*pteLSEjj_AyxurpqPhN8bA.jpeg)
 
 Similarly the fourth layer is formed using the values of the third layer.
@@ -66,7 +67,7 @@ As already mentioned before, Merkel Tree are created by taking two nodes from ea
 
 ![](https://miro.medium.com/max/1400/1*EA7FYersQE_oS6SLBuxlNQ.jpeg)
 
-***This makes the root of the tree available at tree[0]**[0]***
+***This makes the root of the tree available at tree[0][0]***
 
 ## Verification
 
