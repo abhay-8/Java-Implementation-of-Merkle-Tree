@@ -1,4 +1,4 @@
-# Java-Implementation-of-Merkle-Tree
+# Java Implementation of Merkle Tree
 
 # Merkel Trees
 
