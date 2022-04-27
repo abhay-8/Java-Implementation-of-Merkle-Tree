@@ -17,25 +17,35 @@ Mathematically, it can be expressed as
 
 The bottom most layer of the tree would contain all the letters as the leaf nodes.
 
-![Lowest layer of the tree would contain the data in each node](https://miro.medium.com/max/1400/1*1Z7r4Gfjnl_wcMkDcFEWeg.jpeg)
+![](https://miro.medium.com/max/1400/1*1Z7r4Gfjnl_wcMkDcFEWeg.jpeg)
+
+> Lowest layer of the tree would contain the data in each node
 
 The layer above contains its hash values.
 
-![The layer above the leaf node has the hash values of leaf node data](https://miro.medium.com/max/1400/1*T75YmaGKr3Rkoc8FjDcxIA.jpeg)
+![](https://miro.medium.com/max/1400/1*T75YmaGKr3Rkoc8FjDcxIA.jpeg)
+
+> The layer above the leaf node has the hash values of leaf node data
 
 The nodes in the layer after the second layer are contains the hash value of the child nodes. Generally we take two nodes from the second layer and combine them to form another node. We can take more than two nodes as well but binary merkel trees is the simplest of them all and increasing the degree of nodes only increase the computation and algorithms complexity.
 
 If we have even number of nodes, we take 2 consecutive nodes and form the parent layer. But if we have odd number of nodes, we take two consecutive nodes until one is left to form the parent layer, and then we repeat the remaining node by copying the hash to the parent layer.
 
-![Layer 3 has the hash of the values of the 2 consecutive nodes of layer 2 and in case we have odd nodes in a layer the last node is repeated](https://miro.medium.com/max/1400/1*pteLSEjj_AyxurpqPhN8bA.jpeg)
+![](https://miro.medium.com/max/1400/1*pteLSEjj_AyxurpqPhN8bA.jpeg)
+
+> Layer 3 has the hash of the values of the 2 consecutive nodes of layer 2 and in case we have odd nodes in a layer the last node is repeated
 
 Similarly the fourth layer is formed using the values of the third layer.
 
-![The fourth layer is formed by the hash of the values of the 2 consecutive nodes of layer 2](https://miro.medium.com/max/1400/1*HcGy-UdgGvhg-mFG78VXEQ.jpeg)
+![](https://miro.medium.com/max/1400/1*HcGy-UdgGvhg-mFG78VXEQ.jpeg)
+
+> The fourth layer is formed by the hash of the values of the 2 consecutive nodes of layer 2
 
 The final layer or the root of the Merkel Tree is formed by hash value of the last two nodes remaining in top most layer. In any case, odd or even leaf nodes, we will always have two nodes in the top most layer.
 
-![Merkel Tree formed by the five letters](https://miro.medium.com/max/1400/1*KdTlPP6LQk_qlhzKP5V7OQ.jpeg)
+![](https://miro.medium.com/max/1400/1*KdTlPP6LQk_qlhzKP5V7OQ.jpeg)
+
+Merkel Tree formed by the five letters
 
 # Verification
 
@@ -49,7 +59,9 @@ This is not the case with verification in Merkel Tree. To illustrate the verific
 
 In case of a hash chain we would need the entire list of data to verify that C’ is correct. In Merkel Tree we only need the hashes. Following diagram illustrates how we can verify, C’ without other data objects available with us.
 
-![Verifying C’ by hashing all the nodes that lead us to the root](https://miro.medium.com/max/1256/1*HwZtuEwJVDvEJio4OOCKpw.jpeg)
+![](https://miro.medium.com/max/1256/1*HwZtuEwJVDvEJio4OOCKpw.jpeg)
+
+> Verifying C’ by hashing all the nodes that lead us to the root
 
     1. Find the position of the C’ in the list. Probably by searching by id.
     2. Calculate the the hash of C’
