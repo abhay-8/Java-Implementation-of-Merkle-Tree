@@ -1,6 +1,4 @@
-# Java Implementation of Merkle Tree
-
-Merkel Tree isn’t a new concept in Computer Science, it has been around for decades and originates from the field of Cryptography.
+# Introduction to Merkle Tree
 
 To simply put, Merkel Trees are essentially a tree data structure in which data is stored in the leaf nodes and non leaf nodes store hashes of data with each non-leaf node being the combined hash value of the two nodes below it.
 
@@ -84,3 +82,11 @@ As already mentioned before, Merkel Tree are created by taking two nodes from ea
 Verification is a bottom-up approach where we start from the data, find its hash and calculate the parent and continue this until we find the root. Mathematically, we can express it as follows:
 
 ![](https://miro.medium.com/max/1400/1*gGD-kH3a1_CoYeHyYLeodA.jpeg)
+
+# Use Cases :- 
+
+    1. Git, a distributed version control system, is one of the most widely used. It is used to handle projects by programmers from all around the world.
+    2. Interplanetary File System, a peer-to-peer distributed protocol, is another suitable implementation. It's also open-source, allowing computers to join and use a centralized file system.
+    3. It's part of the technique that generates verifiable certificate transparency logs.
+    4. Amazon DynamoDB and Apache Cassandra use it during the data replication process. These No-SQL distributed databases use Merkle trees to control discrepancies.
+
