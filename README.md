@@ -1,7 +1,5 @@
 # Java Implementation of Merkle Tree
 
-# Merkel Trees
-
 Merkel Tree isn’t a new concept in Computer Science, it has been around for decades and originates from the field of Cryptography.
 
 To simply put, Merkel Trees are essentially a tree data structure in which data is stored in the leaf nodes and non leaf nodes store hashes of data with each non-leaf node being the combined hash value of the two nodes below it.
