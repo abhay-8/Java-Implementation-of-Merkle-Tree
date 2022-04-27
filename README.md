@@ -47,7 +47,7 @@ The final layer or the root of the Merkel Tree is formed by hash value of the la
 
 The importance Merkel Trees is in its ability to verify data with efficiency. Given any data from the list we can verify in O(h) time complexity that this data is valid or not. Moreover, we do not need the entire list for verification.
 
-A much simpler form of Merkel Tree is a hash chain or simply a blockchain in which each node has the hash of the previous node’s value. If we tamper any node in between we can identify in O(n) time whether the node is tampered or not. Verification in hash chain can be performed by calculating the hash of all the nodes starting from the node in question and go till the end. In a situation where we have with multiple nodes to verify, we start with the node that is first among all the suspected nodes and calculate the hash of the last node from then on. Now that we have the hash of last node, we can compare and check if this hash matches or not. Hash chain seems simple but is not an efficient choice for large data objects. Since we need the entire chain physically present with us to verify the data, it makes hash chains space inefficient as well.
+A much simpler form of Merkel Tree is a hash chain or simply a blockchain in which each node has the hash of the previous node’s value. If we tamper any node in between we can identify in ***O(n)*** time whether the node is tampered or not. Verification in hash chain can be performed by calculating the hash of all the nodes starting from the node in question and go till the end. In a situation where we have with multiple nodes to verify, we start with the node that is first among all the suspected nodes and calculate the hash of the last node from then on. Now that we have the hash of last node, we can compare and check if this hash matches or not. Hash chain seems simple but is not an efficient choice for large data objects. Since we need the entire chain physically present with us to verify the data, it makes hash chains space inefficient as well.
 
 This is not the case with verification in Merkel Tree. To illustrate the verification process consider the example below.
 
@@ -87,6 +87,5 @@ Verification is a bottom-up approach where we start from the data, find its hash
 
     1. Git, a distributed version control system, is one of the most widely used. It is used to handle projects by programmers from all around the world.
     2. Interplanetary File System, a peer-to-peer distributed protocol, is another suitable implementation. It's also open-source, allowing computers to join and use a centralized file system.
-    3. It's part of the technique that generates verifiable certificate transparency logs.
-    4. Amazon DynamoDB and Apache Cassandra use it during the data replication process. These No-SQL distributed databases use Merkle trees to control discrepancies.
+    3. Amazon DynamoDB and Apache Cassandra use it during the data replication process. These No-SQL distributed databases use Merkle trees to control discrepancies.
 
