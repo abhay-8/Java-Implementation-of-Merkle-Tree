@@ -45,7 +45,7 @@ The final layer or the root of the Merkel Tree is formed by hash value of the la
 
 ![](https://miro.medium.com/max/1400/1*KdTlPP6LQk_qlhzKP5V7OQ.jpeg)
 
-Merkel Tree formed by the five letters
+> Merkel Tree formed by the five letters
 
 # Verification
 
