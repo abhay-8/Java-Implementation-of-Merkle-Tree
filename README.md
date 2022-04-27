@@ -59,6 +59,7 @@ In case of a hash chain we would need the entire list of data to verify that C�
 
 > Verifying C’ by hashing all the nodes that lead us to the root
 
+
     1. Find the position of the C’ in the list. Probably by searching by id.
     2. Calculate the the hash of C’
     3. Calculate the value of the parent node by hashing the current node with its neighbor ( next if position is odd and previous if position in even) and set the parent as the current node.
